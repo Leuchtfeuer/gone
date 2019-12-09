@@ -1,0 +1,31 @@
+{
+    "name": "bitmotion/gone",
+    "description": "Automatically generates redirects (301) when a URL changes and returns a gone status code (410) when a page / record has been deleted.",
+    "type": "typo3-cms-extension",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Florian Wessels",
+            "email": "f.wessels@bitmotion.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-backend": "^9.5",
+        "typo3/cms-core": "^9.5",
+        "typo3/cms-extbase": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bitmotion\\Gone\\": "Classes/"
+        }
+    },
+    "replace": {
+        "bitmotion/gone": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "gone"
+        }
+    }
+}

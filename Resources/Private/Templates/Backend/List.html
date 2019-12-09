@@ -1,0 +1,84 @@
+{namespace be=TYPO3\CMS\Backend\ViewHelpers}
+{namespace core=TYPO3\CMS\Core\ViewHelpers}
+
+<f:layout name="Backend" />
+
+<f:section name="content">
+	<h1><f:translate key="LLL:EXT:gone/Resources/Private/Language/locallang_mod.xlf:module.title" /></h1>
+	<f:flashMessages queueIdentifier="bitmotion.gone.flashMessages" />
+
+	<f:be.infobox title="{f:translate(key: 'LLL:EXT:gone/Resources/Private/Language/locallang_mod.xlf:module.infobox.title')}" state="-1">
+		<f:format.html><f:translate key="LLL:EXT:gone/Resources/Private/Language/locallang_mod.xlf:module.infobox.content" arguments="{0: '{entries -> f:count()}'}"/></f:format.html>
+	</f:be.infobox>
+
+	<h2><f:translate key="LLL:EXT:gone/Resources/Private/Language/locallang_mod.xlf:module.configuration.title" /></h2>
+	<div class="panel panel-default">
+		<table class="table table-striped table-hover">
+			<thead>
+			<tr>
+				<th><f:translate key="LLL:EXT:gone/Resources/Private/Language/locallang_mod.xlf:module.configuration.table.table" /></th>
+				<th><f:translate key="LLL:EXT:gone/Resources/Private/Language/locallang_mod.xlf:module.configuration.table.field" /></th>
+			</tr>
+			</thead>
+			<tbody>
+			<f:for each="{configuration}" as="item">
+				<tr>
+					<td>{f:translate(key: item.title)} <code>{item.table}</code></td>
+					<td>{item.slug}</td>
+				</tr>
+			</f:for>
+			</tbody>
+		</table>
+	</div>
+
+	<h2><f:translate key="LLL:EXT:gone/Resources/Private/Language/locallang_mod.xlf:module.data.title" /></h2>
+	<div class="panel panel-default">
+		<table class="table table-striped table-hover">
+			<thead>
+			<tr>
+				<th class="col-icon nowrap"></th>
+				<th><f:translate key="LLL:EXT:gone/Resources/Private/Language/locallang_mod.xlf:module.data.table.id" /></th>
+				<th><f:translate key="LLL:EXT:gone/Resources/Private/Language/locallang_mod.xlf:module.data.table.title" /></th>
+				<th><f:translate key="LLL:EXT:gone/Resources/Private/Language/locallang_mod.xlf:module.data.table.status" /></th>
+				<th><f:translate key="LLL:EXT:gone/Resources/Private/Language/locallang_mod.xlf:module.data.table.old" /></th>
+				<th><f:translate key="LLL:EXT:gone/Resources/Private/Language/locallang_mod.xlf:module.data.table.new" /></th>
+				<th><f:translate key="LLL:EXT:gone/Resources/Private/Language/locallang_mod.xlf:module.data.table.crdate" /></th>
+				<th class="col-control nowrap"></th>
+			</tr>
+			</thead>
+			<tbody>
+			<f:for each="{entries}" as="entry">
+				<tr>
+					<td class="col-icon nowrap" title="{entry.orig_uid}"><core:iconForRecord row="{entry.record}" table="{entry.table}" /></td>
+					<td>{entry.orig_uid}</td>
+					<td>{entry.title}</td>
+					<td>{entry.code}</td>
+					<td>
+						<span title="{entry.old}">
+							<f:format.crop maxCharacters="50">{entry.old}</f:format.crop>
+						</span>
+					</td>
+					<td>
+						<span title="{entry.new}">
+							<f:format.crop maxCharacters="50">{entry.new}</f:format.crop>
+						</span>
+					</td>
+					<td><f:format.date date="{entry.crdate}" format="{f:translate(key: 'LLL:EXT:gone/Resources/Private/Language/locallang_mod.xlf:module.data.table.crdate.format')}"/></td>
+					<td>
+						<div class="btn-group">
+							<a class="btn btn-default t3js-modal-trigger"
+							   href="{f:uri.action(action: 'delete', controller: 'Backend', arguments: '{entry: entry.uid}')}" data-severity="warning"
+							   title="{f:translate(key: 'LLL:EXT:core/Resources/Private/Language/locallang_mod_web_list.xlf:delete')}"
+							   data-title="{f:translate(key: 'LLL:EXT:backend/Resources/Private/Language/locallang_alt_doc.xlf:label.confirm.delete_record.title')}"
+							   data-content="{f:translate(key: 'LLL:EXT:backend/Resources/Private/Language/locallang_alt_doc.xlf:deleteWarning')}"
+							   data-button-close-text="{f:translate(key: 'LLL:EXT:backend/Resources/Private/Language/locallang_alt_doc.xlf:buttons.confirm.delete_record.no')}">
+								<core:icon identifier="actions-delete" />
+							</a>
+						</div>
+					</td>
+				</tr>
+			</f:for>
+			</tbody>
+		</table>
+	</div>
+</f:section>
