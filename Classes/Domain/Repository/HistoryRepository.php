@@ -47,10 +47,7 @@ class HistoryRepository implements SingletonInterface
             ->where($queryBuilder->expr()->eq('table', $queryBuilder->createNamedParameter($table)))
             ->andWhere(
                 $queryBuilder->expr()->eq('new', $queryBuilder->createNamedParameter($path)),
-                $queryBuilder->expr()->eq(
-                    'code',
-                    $queryBuilder->createNamedParameter(ConfigurationUtility::TYPE_301, \PDO::PARAM_INT)
-                )
+                $queryBuilder->expr()->eq('code', $queryBuilder->createNamedParameter($type, \PDO::PARAM_INT))
             )->execute()
             ->fetchAll();
     }
