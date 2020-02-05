@@ -1,31 +1,42 @@
 {
-    "name": "bitmotion/gone",
-    "description": "Automatically generates redirects (301) when a URL changes and returns a gone status code (410) when a page / record has been deleted.",
-    "type": "typo3-cms-extension",
-    "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "Florian Wessels",
-            "email": "f.wessels@bitmotion.de",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "typo3/cms-backend": "^9.5",
-        "typo3/cms-core": "^9.5",
-        "typo3/cms-extbase": "^9.5"
-    },
-    "autoload": {
-        "psr-4": {
-            "Bitmotion\\Gone\\": "Classes/"
-        }
-    },
-    "replace": {
-        "bitmotion/gone": "self.version"
-    },
-    "extra": {
-        "typo3/cms": {
-            "extension-key": "gone"
-        }
+  "name": "bitmotion/gone",
+  "description": "Automatically generates redirects (301) when a URL changes and returns a gone status code (410) when a page / record has been deleted.",
+    "keywords": ["410", "301", "Status Code", "Redirect"],
+  "type": "typo3-cms-extension",
+  "license": "GPL-2.0-or-later",
+    "homepage": "https://www.bitmotion.de",
+  "authors": [
+    {
+      "name": "Florian Wessels",
+      "email": "f.wessels@bitmotion.de",
+      "role": "Developer",
+        "homepage": "https://www.bitmotion.de"
     }
+  ],
+    "support": {
+        "issues": "https://github.com/bitmotion/gone/issues",
+        "source": "https://github.com/bitmotion/gone",
+        "email": "typo3-ext@bitmotion.de",
+        "docs": "https://docs.typo3.org/p/bitmotion/gone/master/en-us/"
+    },
+  "require": {
+    "typo3/cms-backend": "^9.5",
+    "typo3/cms-core": "^9.5",
+    "typo3/cms-extbase": "^9.5",
+    "typo3/cms-frontend": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bitmotion\\Gone\\": "Classes/"
+    }
+  },
+  "replace": {
+    "typo3-ter/gone": "self.version",
+    "bitmotion/gone": "self.version"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "gone"
+    }
+  }
 }
