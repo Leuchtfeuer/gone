@@ -1,4 +1,5 @@
 <?php
+
 $EM_CONF['gone'] = [
     'title' => 'Gone',
     'description' => 'Automatically generates redirects (301) when a URL changes and returns a gone status code (410) when a page / record has been deleted.',
