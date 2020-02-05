@@ -12,7 +12,7 @@ $EM_CONF['gone'] = [
         'conflicts' => [],
         'suggests' => [],
     ],
-    'state' => 'beta',
+    'state' => 'stable',
     'uploadfolder' => false,
     'createDirs' => '',
     'clearCacheOnLoad' => true,
@@ -21,7 +21,7 @@ $EM_CONF['gone'] = [
     'author_company' => 'Bitmotion GmbH',
     'autoload' => [
         'psr-4' => [
-            'Bitmotion\\Gone\\' => 'Classes/'
+            'Bitmotion\\Gone\\' => 'Classes'
         ],
     ],
 ];
