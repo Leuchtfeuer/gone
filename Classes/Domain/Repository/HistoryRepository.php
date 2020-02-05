@@ -86,7 +86,7 @@ class HistoryRepository implements SingletonInterface
         ])->execute();
     }
 
-    public function updatePath(string $path, int $uid)
+    public function updatePath(string $path, int $uid): void
     {
         $queryBuilder = $this->getQueryBuilder();
         $queryBuilder
