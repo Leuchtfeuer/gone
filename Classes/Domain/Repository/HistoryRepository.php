@@ -1,19 +1,19 @@
 <?php
-declare(strict_types = 1);
-namespace Bitmotion\Gone\Domain\Repository;
 
-/***
- *
- * This file is part of the "Gone" Extension for TYPO3 CMS.
+declare(strict_types=1);
+
+/*
+ * This file is part of the "Gone" extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2019 Florian Wessels <f.wessels@bitmotion.de>, Bitmotion GmbH
- *
- ***/
+ * Florian Wessels <f.wessels@Leuchtfeuer.com>, Leuchtfeuer Digital Marketing
+ */
 
-use Bitmotion\Gone\Utility\ConfigurationUtility;
+namespace Leuchtfeuer\Gone\Domain\Repository;
+
+use Leuchtfeuer\Gone\Utility\ConfigurationUtility;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;

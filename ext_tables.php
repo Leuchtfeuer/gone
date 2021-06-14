@@ -6,7 +6,7 @@ call_user_func(
     function ($extensionKey) {
         // Backend Module
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
-            'Bitmotion.Gone',
+            'Leuchtfeuer.Gone',
             'site',
             'gone',
             'bottom',

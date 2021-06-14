@@ -12,7 +12,7 @@ call_user_func(
         ############
         #   HOOK   #
         ############
-        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass'][$extensionKey] = \Bitmotion\Gone\Hook\TCEmainHook::class;
-        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass'][$extensionKey] = \Bitmotion\Gone\Hook\TCEmainHook::class;
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass'][$extensionKey] = \Leuchtfeuer\Gone\Hook\TCEmainHook::class;
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass'][$extensionKey] = \Leuchtfeuer\Gone\Hook\TCEmainHook::class;
     }, 'gone'
 );

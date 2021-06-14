@@ -3,8 +3,8 @@ declare(strict_types = 1);
 
 return [
     'frontend' => [
-        'bitmotion/gone' => [
-            'target' => \Bitmotion\Gone\Middleware\StatusCodeMiddleware::class,
+        'leuchtfeuer/gone' => [
+            'target' => \Leuchtfeuer\Gone\Middleware\StatusCodeMiddleware::class,
             'after' => [
                 'typo3/cms-frontend/site',
             ],

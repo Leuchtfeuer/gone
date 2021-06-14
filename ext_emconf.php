@@ -17,11 +17,11 @@ $EM_CONF['gone'] = [
     'createDirs' => '',
     'clearCacheOnLoad' => true,
     'author' => 'Florian Wessels',
-    'author_email' => 'typo3-ext@bitmotion.de',
-    'author_company' => 'Bitmotion GmbH',
+    'author_email' => 'f.wessels@Leuchtfeuer.com',
+    'author_company' => 'Leuchtfeuer Digital Marketing',
     'autoload' => [
         'psr-4' => [
-            'Bitmotion\\Gone\\' => 'Classes'
+            'Leuchtfeuer\\Gone\\' => 'Classes'
         ],
     ],
 ];

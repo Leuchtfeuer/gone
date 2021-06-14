@@ -1,20 +1,20 @@
 <?php
-declare(strict_types = 1);
-namespace Bitmotion\Gone\Controller;
 
-/***
- *
- * This file is part of the "Gone" Extension for TYPO3 CMS.
+declare(strict_types=1);
+
+/*
+ * This file is part of the "Gone" extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2019 Florian Wessels <f.wessels@bitmotion.de>, Bitmotion GmbH
- *
- ***/
+ * Florian Wessels <f.wessels@Leuchtfeuer.com>, Leuchtfeuer Digital Marketing
+ */
 
-use Bitmotion\Gone\Domain\Repository\HistoryRepository;
-use Bitmotion\Gone\Utility\ConfigurationUtility;
+namespace Leuchtfeuer\Gone\Controller;
+
+use Leuchtfeuer\Gone\Domain\Repository\HistoryRepository;
+use Leuchtfeuer\Gone\Utility\ConfigurationUtility;
 use TYPO3\CMS\Backend\View\BackendTemplateView;
 use TYPO3\CMS\Core\Messaging\FlashMessage;
 use TYPO3\CMS\Core\Messaging\FlashMessageService;
@@ -24,7 +24,7 @@ use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 
 class BackendController extends ActionController
 {
-    private const FLASH_MESSAGE_QUEUE_IDENTIFIER = 'bitmotion.gone.flashMessages';
+    private const FLASH_MESSAGE_QUEUE_IDENTIFIER = 'leuchtfeuer.gone.flashMessages';
 
     protected $defaultViewObjectName = BackendTemplateView::class;
 

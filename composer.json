@@ -1,24 +1,24 @@
 {
-  "name": "bitmotion/gone",
+  "name": "leuchtfeuer/gone",
   "description": "Automatically generates redirects (301) when a URL changes and returns a gone status code (410) when a page / record has been deleted.",
     "keywords": ["410", "301", "Status Code", "Redirect"],
   "type": "typo3-cms-extension",
   "license": "GPL-2.0-or-later",
-    "homepage": "https://www.bitmotion.de",
+    "homepage": "https://www.Leuchtfeuer.com",
   "authors": [
     {
-      "name": "Florian Wessels",
-      "email": "f.wessels@bitmotion.de",
-      "role": "Developer",
-        "homepage": "https://www.bitmotion.de"
+        "name": "Florian Wessels",
+        "email": "f.wessels@Leuchtfeuer.com",
+        "role": "Developer",
+        "homepage": "https://www.Leuchtfeuer.com"
     }
   ],
-    "support": {
-        "issues": "https://github.com/bitmotion/gone/issues",
-        "source": "https://github.com/bitmotion/gone",
-        "email": "typo3-ext@bitmotion.de",
-        "docs": "https://docs.typo3.org/p/bitmotion/gone/master/en-us/"
-    },
+  "support": {
+    "issues": "https://github.com/Leuchtfeuer/gone/issues",
+    "source": "https://github.com/Leuchtfeuer/gone",
+    "email": "dev@Leuchtfeuer.com",
+    "docs": "https://docs.typo3.org/p/leuchtfeuer/gone/master/en-us/"
+  },
   "require": {
     "typo3/cms-backend": "^9.5",
     "typo3/cms-core": "^9.5",
@@ -27,7 +27,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Bitmotion\\Gone\\": "Classes/"
+      "Leuchtfeuer\\Gone\\": "Classes/"
     }
   },
   "replace": {
