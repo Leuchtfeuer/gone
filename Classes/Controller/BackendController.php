@@ -39,7 +39,9 @@ class BackendController extends ActionController
         ConfigurationUtility $configurationUtility,
         FlashMessageService $flashMessageService
     ) {
-        parent::__construct();
+        if (version_compare(TYPO3_version, '10.0.0', '<')) {
+            parent::__construct();
+        }
 
         $this->historyRepository = $historyRepository;
         $this->configurationUtility = $configurationUtility;

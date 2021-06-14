@@ -1,7 +1,12 @@
 {
   "name": "leuchtfeuer/gone",
   "description": "Automatically generates redirects (301) when a URL changes and returns a gone status code (410) when a page / record has been deleted.",
-    "keywords": ["410", "301", "Status Code", "Redirect"],
+  "keywords": [
+    "410",
+    "301",
+    "Status Code",
+    "Redirect"
+  ],
   "type": "typo3-cms-extension",
   "license": "GPL-2.0-or-later",
     "homepage": "https://www.Leuchtfeuer.com",
@@ -20,10 +25,10 @@
     "docs": "https://docs.typo3.org/p/leuchtfeuer/gone/master/en-us/"
   },
   "require": {
-    "typo3/cms-backend": "^9.5",
-    "typo3/cms-core": "^9.5",
-    "typo3/cms-extbase": "^9.5",
-    "typo3/cms-frontend": "^9.5"
+    "typo3/cms-backend": "^9.5.25 || ^10.4.14",
+    "typo3/cms-core": "^9.5.25 || ^10.4.14",
+    "typo3/cms-extbase": "^9.5.25 || ^10.4.14",
+    "typo3/cms-frontend": "^9.5.25 || ^10.4.14"
   },
   "autoload": {
     "psr-4": {
